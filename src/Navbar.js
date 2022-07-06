@@ -8,7 +8,7 @@ export default function Navbar() {
       </Link>
       <ul>
         <CustomLink to="/graph1">Knowledge Graph</CustomLink>
-        <CustomLink to="/graph2">Tree knowledge Graph</CustomLink>
+        {/* <CustomLink to="/graph2">Tree knowledge Graph</CustomLink> */}
         <CustomLink to="/graph3">Bar Graph</CustomLink>
       </ul>
     </nav>
