@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
-const baseURL = "http://127.0.0.1:8000";
+const baseURL = "https://backend152.herokuapp.com";
 
 
 const Graph1 = () => {

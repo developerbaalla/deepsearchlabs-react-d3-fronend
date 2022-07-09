@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Tree from 'react-d3-tree';
 
-const baseURL = "http://127.0.0.1:8000";
+const baseURL = "https://backend152.herokuapp.com";
 
 const containerStyles = {
   width: "100%",
