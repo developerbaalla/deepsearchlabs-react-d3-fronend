@@ -15,6 +15,7 @@ const Graph1 = () => {
   const [count, setCount] = useState(0)
   const [countPage, setCountPage] = useState(0)
   const [moreToLoad, setMoreToLoad] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const _limit = 20
 
   // Load data
@@ -150,6 +151,8 @@ const Graph1 = () => {
         setData({"nodes": nodes, "links": links});
       }
 
+      setIsLoading(false);
+
     })
   };
 
@@ -169,6 +172,7 @@ const Graph1 = () => {
   };
 
   const onNextClick = () => {
+    setIsLoading(true);
     if(currentPage+1 >= countPage){
         setMoreToLoad(false)
     }else{
@@ -214,7 +218,9 @@ const Graph1 = () => {
         </table>
       </div>
       <div ref={d3Chart}></div>
-      {moreToLoad && <div><button onClick={() => onNextClick()}>Load More</button></div>}
+      {moreToLoad && <div><button onClick={() => onNextClick()}>
+        {isLoading ? 'Loading...' : 'Load More'}
+      </button></div>}
 		</div>
 	)
 }
